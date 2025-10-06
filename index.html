@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ARISTO.!</h1>
+        <button id="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </header>
+    
+      
+     <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        
+        <button class="close-cart" onclick="toggleCart()">✖</button>
+        
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: <span id="total-price">0</span></strong></p>
+
+       
+        <div class="cart-buttons">
+            <button class="buy-btn">Buy Now</button>
+            
+        </div>
+    </div>
+</div>
+    
+    
+<div id="checkout-modal" class="checkout-modal">
+    <div class="checkout-content">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" required></textarea>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment">
+                <option value="cod">Cash on Delivery</option>
+                <option value="upi">UPI</option>
+                <option value="card">Credit/Debit Card</option>
+            </select>
+
+            <button type="submit" class="sub">Confirm Order</button>
+            <button type="button" class="close-checkout" onclick="toggleCheckout()">Cancel</button>
+        </form>
+    </div>
+</div>
+    
+    
+<div class="filters">
+    <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="E">Electronics</option>
+        <option value="C">Clothing</option>
+        <option value="A">Accessories</option>
+        <option value="F">Furnitures</option>
+    </select>
+</div>
+    
+    <div class="product-grid">
+        
+        <div class="pro F">
+            <img src="F1.png" alt="Chair">
+            <h3>Cotton Grey Sofa</h3>
+            <p class="price">₹2798</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro F">
+            <img src="F2.png" alt="Chair">
+            <h3>Office Black Chair</h3>
+            <p class="price">₹4599</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro F">
+            <img src="F3.png" alt="Chair">
+            <h3>Gaming Chair</h3>
+            <p class="price">₹6398</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro A">
+            <img src="8.png" alt="Storage">
+            <h3>SanDisk Pen Drive</h3>
+            <p class="price">₹769</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+
+        <div class="pro A">
+            <img src="A1.png" alt="Accessories">
+            <h3> Travel Adopter</h3>
+            <p class="price">₹640</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        <div class="pro E">
+            <img src="E1.png" alt="Smartphone">
+            <h3>JBL Headphones</h3>
+            <p class="price">₹2590</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro E">
+            <img src="E2.png" alt="Laptop">
+            <h3>JBL E-Series</h3>
+            <p class="price">₹2890</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro C">
+            <img src="C1.png" alt="T-Shirt">
+            <h3>Orange Hoodie</h3>
+            <p class="price">₹499</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro C">
+            <img src="C2.png" alt="Jeans">
+            <h3>Greyish Hoodie</h3>
+            <p class="price">₹489</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+
+        <div class="pro A">
+            <img src="A2.png" alt="Watch">
+            <h3>Power Bank</h3>
+            <p class="price">₹2599</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        <div class="pro E">
+            <img src="E3.png" alt="Smartphone">
+            <h3>JBL Speaker</h3>
+            <p class="price">₹5190</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro E">
+            <img src="E4.png" alt="Laptop">
+            <h3>HP G15 Laptop</h3>
+            <p class="price">₹42598</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro C">
+            <img src="S1.png" alt="Shoes">
+            <h3>Nike shoeswear</h3>
+            <p class="price">₹20</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+        
+        <div class="pro C">
+            <img src="C3.png" alt="Cloth">
+            <h3>Sleeved Shirt</h3>
+            <p class="price">₹599</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+
+        <div class="pro F">
+            <img src="F6.png" alt="Furniture">
+            <h3>Clasic dining table</h3>
+            <p class="price">₹2598</p>
+            <button class="atc">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
